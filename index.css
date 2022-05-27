@@ -1,0 +1,48 @@
+*,
+*:after,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(115, 119, 123);
+}
+
+.main-wrapper {
+  width: 90%;
+  max-width: 650px;
+}
+
+h1 {
+  color: rgb(21, 19, 60);
+}
+
+.container {
+  width: 100%;
+  height: 650px;
+  border: 2px solid rgb(21, 19, 60);
+  border-bottom-width: 10px;
+  padding: 0 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.numEle {
+  background-color: rgb(236, 153, 75);
+}
+
+@media (max-width: 600px) {
+  .container {
+    gap: 0;
+  }
+}
