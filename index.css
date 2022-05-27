@@ -41,6 +41,10 @@ h1 {
   background-color: rgb(236, 153, 75);
 }
 
+.curr {
+  background-color: chartreuse !important;
+}
+
 @media (max-width: 600px) {
   .container {
     gap: 0;

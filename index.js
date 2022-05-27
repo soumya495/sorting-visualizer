@@ -12,12 +12,15 @@ for (let i = 0; i < 100; i++) {
 const container = document.querySelector('.container')
 
 // creating the visual
-function createVisual(array) {
-  array.map((ele) => {
+function createVisual(array, currIndex) {
+  array.map((ele, index) => {
     const newEle = document.createElement('div')
     newEle.style.width = '3px'
     newEle.style.height = `${ele}px`
     newEle.classList.add('numEle')
+    if (index === currIndex) {
+      newEle.classList.add('curr')
+    }
     container.appendChild(newEle)
   })
 }
@@ -26,14 +29,14 @@ function clearVisual() {
   container.innerHTML = ''
 }
 
-createVisual(array)
+createVisual(array, -1)
 
 // implementing bubble sort
 async function bubbleSort(arr) {
   clearVisual()
   const arrLen = arr.length
   for (let i = 0; i < arrLen - 1; i++) {
-    createVisual(arr)
+    createVisual(arr, i)
     let swapped = false
     for (let j = 0; j < arrLen - i - 1; j++) {
       if (arr[j] > arr[j + 1]) {
@@ -54,6 +57,10 @@ async function bubbleSort(arr) {
   console.log('sorted array!!')
 }
 
-document.querySelector('button').addEventListener('click', () => {
+document.querySelector('#sort').addEventListener('click', () => {
   bubbleSort(array)
+})
+
+document.querySelector('#new').addEventListener('click', () => {
+  window.location.reload()
 })
