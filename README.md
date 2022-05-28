@@ -2,6 +2,8 @@
 
 <b>Help You Visualize some of the Sorting Algorithms</b>
 
-Algorithms Supported : 
+Algorithms that I've implemented till now :
+
 - Bubble Sort
+- Selection Sort
 - Merge Sort

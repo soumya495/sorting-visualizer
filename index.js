@@ -49,6 +49,30 @@ async function bubbleSort(arr) {
   }
 }
 
+// implementing selection sort
+async function selectionSort(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    clearVisual()
+    let min = i
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[min]) {
+        min = j
+      }
+    }
+    if (min !== i) {
+      let temp = arr[i]
+      arr[i] = arr[min]
+      arr[min] = temp
+    }
+    createVisual(arr)
+    await new Promise((resolve) => {
+      setTimeout(() => {
+        resolve()
+      }, 200)
+    })
+  }
+}
+
 // implementing merge sort
 async function merge(arr, s, m, e) {
   const newArr = []
@@ -114,5 +138,6 @@ newBtn.addEventListener('click', () => {
 
 sortBtn.addEventListener('click', () => {
   if (algo.value === 'bubble') bubbleSort(array)
+  else if (algo.value === 'selection') selectionSort(array)
   else if (algo.value === 'merge') visualizeMerge()
 })
