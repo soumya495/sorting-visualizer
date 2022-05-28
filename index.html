@@ -9,10 +9,18 @@
   </head>
   <body>
     <div class="main-wrapper">
-      <h1>Sorting Visualizer</h1>
+      <div class="upper-container">
+        <h1>Sorting Visualizer</h1>
+        <select name="algorithm" id="algorithm">
+          <option value="bubble">Bubble Sort</option>
+          <option value="merge">Merge Sort</option>
+        </select>
+        <div class="btn-container">
+          <button id="sort">Sort</button>
+          <button id="new">New</button>
+        </div>
+      </div>
       <div class="container"></div>
-      <button id="sort">Sort</button>
-      <button id="new">New</button>
     </div>
     <script src="index.js"></script>
   </body>
