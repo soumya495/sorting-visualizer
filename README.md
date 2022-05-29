@@ -7,3 +7,4 @@ Algorithms that I've implemented till now :
 - Bubble Sort
 - Selection Sort
 - Merge Sort
+- Quick Sort
